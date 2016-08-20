@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">K-Tour</string>
+
+    <string name="MobileOS">AND</string>
+    <string name="MobileApp">@string/app_name</string>
+    <string name="Daum_API_Key">f22658c301895d35a8ee2add45b496b3</string>
+    <string name="Data_API_Key">w%2BaloIJxj%2BWOIOgQzb6aDZi7OSjvOlKcTKPCbZYxUDW%2Fh1%2FngJMTwd6SqoWJe4dwvc19Gw6ryg8PEVfc%2BCvM9g%3D%3D</string>
+
+    <!--지역코드조회-->
+    <string name="areaCode_URL">http://api.visitkorea.or.kr/openapi/service/rest/EngService/areaCode</string>
+    <!--서비스분류코드조회-->
+    <string name="categoryCode_URL">http://api.visitkorea.or.kr/openapi/service/rest/EngService/categoryCode</string>
+    <!--키워드 조회-->
+    <string name="searchKeyword_URL">http://api.visitkorea.or.kr/openapi/service/rest/EngService/searchKeyword</string>
+    <!--행사정보조회-->
+    <string name="searchFestival_URL">http://api.visitkorea.or.kr/openapi/service/rest/EngService/searchFestival</string>
+    <!--숙박정보조회-->
+    <string name="searchStay_URL">http://api.visitkorea.or.kr/openapi/service/rest/EngService/searchStay</string>
+    <!--지역기반 관광정보조회-->
+    <string name="areaBasedList_URL">http://api.visitkorea.or.kr/openapi/service/rest/EngService/areaBasedList</string>
+    <!--위치기반 관광정보조회-->
+    <string name="locationBasedList_URL">http://api.visitkorea.or.kr/openapi/service/rest/EngService/locationBasedList</string>
+    <!--소개정보조회-->
+    <string name="detailIntro_URL">http://api.visitkorea.or.kr/openapi/service/rest/EngService/detailIntro</string>
+    <!--반복정보조회-->
+    <string name="detailInfo_URL">http://api.visitkorea.or.kr/openapi/service/rest/EngService/detailInfo</string>
+    <!--이미지정보조회-->
+    <string name="detailImage_URL">http://api.visitkorea.or.kr/openapi/service/rest/EngService/detailImage</string>
+    <!--공통정보조회-->
+    <string name="detailCommon_URL">http://api.visitkorea.or.kr/openapi/service/rest/EngService/detailCommon</string>
+
 </resources>
