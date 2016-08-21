@@ -10,10 +10,10 @@ import android.widget.TextView;
 import com.android.volley.toolbox.NetworkImageView;
 import com.example.hanaj.k_tour.R;
 import com.example.hanaj.k_tour.common.Network.NetworkManager;
-import com.example.hanaj.k_tour.common.Response.AreaBasedBody;
-import com.example.hanaj.k_tour.common.Response.AreaBasedItem;
-import com.example.hanaj.k_tour.common.Response.AreaBasedJsonResponse;
-import com.example.hanaj.k_tour.common.Response.AreaBasedResponse;
+import com.example.hanaj.k_tour.common.Network.Response.AreaBasedBody;
+import com.example.hanaj.k_tour.common.Network.Response.AreaBasedItem;
+import com.example.hanaj.k_tour.common.Network.Response.AreaBasedJsonResponse;
+import com.example.hanaj.k_tour.common.Network.Response.AreaBasedResponse;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -11,12 +11,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.hanaj.k_tour.R;
 import com.example.hanaj.k_tour.common.Network.NetworkManager;
-import com.example.hanaj.k_tour.common.Response.AreaBasedJsonResponse;
-import com.example.hanaj.k_tour.common.Response.AreaBasedResponse;
+import com.example.hanaj.k_tour.common.Network.Response.AreaBasedJsonResponse;
 import com.google.gson.Gson;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 /**
  * Created by alphaposter on 2016. 8. 21..

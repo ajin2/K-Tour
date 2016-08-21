@@ -1,6 +1,4 @@
-package com.example.hanaj.k_tour.common.Response;
-
-import java.util.Date;
+package com.example.hanaj.k_tour.common.Network.Response;
 
 import lombok.Data;
 

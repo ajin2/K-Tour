@@ -1,4 +1,4 @@
-package com.example.hanaj.k_tour.common.Response;
+package com.example.hanaj.k_tour.common.Network.Response;
 
 import java.util.List;
 
