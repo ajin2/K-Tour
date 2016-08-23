@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">K-Tour</string>
 
+    <string name="b_search">검색</string>
+
+    <string name="category1">관광</string>
+    <string name="category2">2</string>
+    <string name="category3">3</string>
+    <string name="category4">4</string>
+    <string name="category5">5</string>
+    <!-- 카테고리 1~5 임의로 이름 설정 -->
+
     <string name="MobileOS">AND</string>
     <string name="MobileApp">@string/app_name</string>
     <string name="Daum_API_Key">f22658c301895d35a8ee2add45b496b3</string>
