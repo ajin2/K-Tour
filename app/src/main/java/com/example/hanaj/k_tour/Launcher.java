@@ -9,7 +9,7 @@ import android.widget.Button;
 
 import com.example.hanaj.k_tour.common.Network.Sample.NetworkTestActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class Launcher extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(MainActivity.this, Main_View.class);
+                Intent i = new Intent(Launcher.this, Main_View.class);
                 // ~~.this가 현재 activity,
                 // ~~.class가 이동할 activity
                 startActivity(i);
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         networkTestBtn.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, NetworkTestActivity.class);
+                Intent intent = new Intent(Launcher.this, NetworkTestActivity.class);
                 startActivity(intent);
             }
         });
