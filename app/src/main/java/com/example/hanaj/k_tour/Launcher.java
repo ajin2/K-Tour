@@ -6,8 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.example.hanaj.k_tour.common.Network.Sample.NetworkTestActivity;
+
+import java.util.Random;
 
 public class Launcher extends AppCompatActivity {
 
@@ -38,6 +41,17 @@ public class Launcher extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        LinearLayout back;
+        int img[] = {
+                R.drawable.launcher_androids, R.drawable.launcher_avril_lavigne, R.drawable.launcher_twice,
+                R.drawable.launcher_kaka
+        };
+
+        back = (LinearLayout)findViewById(R.id.laun);
+        Random ram= new Random();
+        int num = ram.nextInt(img.length);
+        back.setBackgroundResource(img[num]);
     }
 
 
