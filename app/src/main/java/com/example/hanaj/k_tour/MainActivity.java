@@ -8,7 +8,7 @@ import com.example.hanaj.k_tour.R;
 
 import java.util.ArrayList;
 
-public class Main_View extends Activity {
+public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

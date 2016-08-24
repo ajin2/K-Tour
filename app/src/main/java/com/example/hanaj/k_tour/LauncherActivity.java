@@ -12,7 +12,7 @@ import com.example.hanaj.k_tour.common.Network.Sample.NetworkTestActivity;
 
 import java.util.Random;
 
-public class Launcher extends AppCompatActivity {
+public class LauncherActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,34 +25,33 @@ public class Launcher extends AppCompatActivity {
         mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(Launcher.this, Main_View.class);
+                Intent i = new Intent(LauncherActivity.this, MainActivity.class);
                 // ~~.this가 현재 activity,
                 // ~~.class가 이동할 activity
                 startActivity(i);
                 finish();
             }
-        }, 3000); // 3000ms
+        }, 500); // 0.5초
 
         Button networkTestBtn = (Button)findViewById(R.id.network_test_btn);
         networkTestBtn.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Launcher.this, NetworkTestActivity.class);
+                Intent intent = new Intent(LauncherActivity.this, NetworkTestActivity.class);
                 startActivity(intent);
             }
         });
 
-        LinearLayout back;
+       // LinearLayout background;
+
         int img[] = {
                 R.drawable.launcher_androids, R.drawable.launcher_avril_lavigne, R.drawable.launcher_twice,
                 R.drawable.launcher_kaka
         };
 
-        back = (LinearLayout)findViewById(R.id.laun);
-        Random ram= new Random();
-        int num = ram.nextInt(img.length);
-        back.setBackgroundResource(img[num]);
+        LinearLayout background = (LinearLayout)findViewById(R.id.launcherlayout);
+        Random random = new Random();
+        Integer num = random.nextInt(img.length);
+        background.setBackgroundResource(img[num]);
     }
-
-
 }
