@@ -56,7 +56,7 @@ public class NetworkTestActivity extends AppCompatActivity{
 
         String url = stringBuilder.toString();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+        StringRequest stringRequest = new UTF8StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
