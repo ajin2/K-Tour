@@ -7,12 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.example.hanaj.k_tour.common.Culture.CultureActivity;
-import com.example.hanaj.k_tour.common.Festival.FestivalActivity;
-import com.example.hanaj.k_tour.common.House.HouseActivity;
 import com.example.hanaj.k_tour.common.Network.Sample.NetworkTestActivity;
-import com.example.hanaj.k_tour.common.Restaurant.RestaurantActivity;
-import com.example.hanaj.k_tour.common.Tour.TourActivity;
 
 public class MainActivity extends Activity {
     @Override
