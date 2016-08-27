@@ -34,51 +34,6 @@
             android:id="@+id/network_test_btn"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/tourMainBtn"
-            android:layout_width="65dp"
-            android:layout_height="45dp"
-            android:textSize="10sp"
-            android:text="tour
-            관광"
-            />
-        <Button
-            android:id="@+id/houseMainBtn"
-            android:layout_width="65dp"
-            android:layout_height="45dp"
-            android:textSize="10sp"
-            android:text="house
-            숙박"
-            />
-        <Button
-            android:id="@+id/festivalMainBtn"
-            android:layout_width="65dp"
-            android:layout_height="45dp"
-            android:textSize="10sp"
-            android:text="festival
-            행사/축제/공연"
-            />
-        <Button
-            android:id="@+id/cultureMainBtn"
-            android:layout_width="65dp"
-            android:layout_height="45dp"
-            android:textSize="10sp"
-            android:text="culture
-            문화시설"
-            />
-        <Button
-            android:id="@+id/restaurantMainBtn"
-            android:layout_width="65dp"
-            android:layout_height="45dp"
-            android:textSize="10sp"
-            android:text="restaurant
-            음식점"
-            />
-    </LinearLayout>
-
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
