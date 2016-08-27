@@ -24,6 +24,13 @@
         <activity android:name=".common.Network.Sample.NetworkTestActivity">
         </activity>
 
+        <activity android:name=".common.Tour.TourActivity" android:label="@layout/tour_main_layout"/>
+        <activity android:name=".common.Culture.CultureActivity" android:label="@layout/culture_main_layout"/>
+        <activity android:name=".common.Festival.FestivalActivity" android:label="@layout/festival_main_layout"/>
+        <activity android:name=".common.House.HouseActivity" android:label="@layout/house_main_layout"/>
+        <activity android:name=".common.Restaurant.RestaurantActivity" android:label="@layout/restaurant_main_layout"/>
+
+
     </application>
 
 </manifest>
