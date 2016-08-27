@@ -83,7 +83,7 @@ public class NetworkTestListViewAdapter extends BaseAdapter {
         NetworkTestViewHolder viewHolder;
         if(convertView == null) {
             viewHolder = new NetworkTestViewHolder();
-            convertView = layoutInflater.inflate(R.layout.network_listview_item, parent, false);
+            convertView = layoutInflater.inflate(R.layout.listview_item, parent, false);
 
             viewHolder.setTestImageView((NetworkImageView)convertView.findViewById(R.id.testImageView));
             viewHolder.setTitleTextView((TextView)convertView.findViewById(R.id.testTitleTextView));
