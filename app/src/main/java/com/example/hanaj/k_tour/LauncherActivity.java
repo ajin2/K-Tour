@@ -33,17 +33,7 @@ public class LauncherActivity extends AppCompatActivity {
             }
         }, 500); // 0.5초
 
-        Button networkTestBtn = (Button)findViewById(R.id.network_test_btn);
-        networkTestBtn.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LauncherActivity.this, NetworkTestActivity.class);
-                startActivity(intent);
-            }
-        });
-
-       // LinearLayout background;
-
+        // LinearLayout background;
         int img[] = {
                 R.drawable.launcher_androids, R.drawable.launcher_avril_lavigne, R.drawable.launcher_twice,
                 R.drawable.launcher_kaka
