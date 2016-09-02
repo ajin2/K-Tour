@@ -17,12 +17,15 @@ import com.example.hanaj.k_tour.common.Network.Response.AreaBasedJsonResponse;
 import com.example.hanaj.k_tour.common.Network.Sample.NetworkTestActivity;
 import com.example.hanaj.k_tour.common.Network.Sample.NetworkTestListViewAdapter;
 import com.example.hanaj.k_tour.common.Network.Sample.UTF8StringRequest;
+import com.example.hanaj.k_tour.common.Tour.TourListViewAdapter;
 import com.google.gson.Gson;
 
 public class MainActivity extends Activity {
 
     private ListView networkTestListView;
+    private ListView tourListView;
     private NetworkTestListViewAdapter networkTestListViewAdapter;
+    private TourListViewAdapter tourListViewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +33,11 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         Button networkTestBtn = (Button)findViewById(R.id.network_test_btn);
-        ListView listView = (ListView) findViewById(R.id.listView);
+        ListView listView = (ListView) findViewById(R.id.tour_main_listView);
+
+        tourListViewAdapter = new TourListViewAdapter(getApplicationContext());
+        listView.setAdapter(tourListViewAdapter);
+        requestTestData();
 
         networkTestListViewAdapter = new NetworkTestListViewAdapter(getApplicationContext());
         listView.setAdapter(networkTestListViewAdapter);
@@ -75,6 +82,9 @@ public class MainActivity extends Activity {
 
                 Gson gson = new Gson();
                 AreaBasedJsonResponse areaBasedJsonResponse = gson.fromJson(response, AreaBasedJsonResponse.class);
+
+                tourListViewAdapter.addTourDataList(areaBasedJsonResponse);
+                tourListViewAdapter.notifyDataSetChanged();
 
                 networkTestListViewAdapter.addNetworkTestDataList(areaBasedJsonResponse);
                 networkTestListViewAdapter.notifyDataSetChanged();
