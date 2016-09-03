@@ -1,4 +1,4 @@
-package com.example.hanaj.k_tour.common.Network.Sample;
+package com.example.hanaj.k_tour.common.Network;
 
 import android.util.ArrayMap;
 
@@ -28,15 +28,5 @@ public class UTF8StringRequest extends StringRequest{
             e.printStackTrace();
             return Response.error(new ParseError(e));
         }
-        //return Response.success(strUTF8, HttpHeaderParser.parseCacheHeaders(response));
     }
-/*
-    @Override
-    public Map<String, String> getHeaders() {
-        Map<String, String> headers = new ArrayMap<>();
-        headers.put("Accept", "application/json");
-        headers.put("Content-Type", "application/json; charset=UTF-8");
-        return headers;
-    }
-    */
 }
