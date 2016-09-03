@@ -10,6 +10,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <EditText
             android:id="@+id/SearchText"
             android:layout_width="0dp"
@@ -35,12 +36,11 @@
     </LinearLayout>
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/tour_main_listView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:divider="#ffcc22"
+        android:divider="#F30910"
         android:dividerHeight="1.5dp" />
-
 
 </LinearLayout>
