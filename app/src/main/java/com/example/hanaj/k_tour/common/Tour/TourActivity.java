@@ -12,7 +12,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.example.hanaj.k_tour.R;
 import com.example.hanaj.k_tour.common.Network.NetworkManager;
 import com.example.hanaj.k_tour.common.Network.Response.AreaBasedJsonResponse;
-import com.example.hanaj.k_tour.common.Network.Sample.UTF8StringRequest;
+import com.example.hanaj.k_tour.common.Network.UTF8StringRequest;
 import com.google.gson.Gson;
 
 /**
