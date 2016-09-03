@@ -16,7 +16,7 @@ import com.example.hanaj.k_tour.common.Network.NetworkManager;
 import com.example.hanaj.k_tour.common.Network.Response.AreaBasedJsonResponse;
 import com.example.hanaj.k_tour.common.Network.Sample.NetworkTestActivity;
 import com.example.hanaj.k_tour.common.Network.Sample.NetworkTestListViewAdapter;
-import com.example.hanaj.k_tour.common.Network.Sample.UTF8StringRequest;
+import com.example.hanaj.k_tour.common.Network.UTF8StringRequest;
 import com.google.gson.Gson;
 
 public class MainActivity extends Activity {
