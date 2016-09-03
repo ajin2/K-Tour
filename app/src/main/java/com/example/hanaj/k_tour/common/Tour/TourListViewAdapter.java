@@ -39,6 +39,7 @@ public class TourListViewAdapter extends BaseAdapter {
         AreaBasedResponse response = areaBasedJsonResponse.getResponse();
         if(!response.getHeader().getResultCode().equals("0000")){
             return;
+
         }
 
         AreaBasedBody body = response.getBody();
