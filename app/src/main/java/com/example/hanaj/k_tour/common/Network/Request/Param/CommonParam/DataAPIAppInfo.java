@@ -9,7 +9,11 @@ import lombok.Data;
  */
 @Data
 public class DataAPIAppInfo {
-    //Default Value
-    private final String appName = AppInfo.NAME;
-    private final String mobileOS = AppInfo.OS;
+    private final String appName;
+    private final String mobileOS;
+
+    public DataAPIAppInfo() {
+        appName = AppInfo.NAME;
+        mobileOS = AppInfo.OS;
+    }
 }

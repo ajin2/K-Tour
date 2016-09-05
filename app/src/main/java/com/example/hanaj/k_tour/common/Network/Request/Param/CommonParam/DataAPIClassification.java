@@ -13,4 +13,10 @@ public class DataAPIClassification {
     private String cat2;
     //소분류
     private String cat3;
+
+    public DataAPIClassification() {
+        cat1 = "";
+        cat2 = "";
+        cat3 = "";
+    }
 }

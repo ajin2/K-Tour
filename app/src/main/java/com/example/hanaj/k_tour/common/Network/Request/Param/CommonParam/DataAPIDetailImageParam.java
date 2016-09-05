@@ -11,5 +11,13 @@ public class DataAPIDetailImageParam {
     private DataAPIPageInfo dataAPIPageInfo;
     private Integer contentId;
     private Integer contentTypeId;
-    private boolean imageYN = true;
+    private boolean imageYN;
+
+    public DataAPIDetailImageParam() {
+        dataAPIAppInfo = new DataAPIAppInfo();
+        dataAPIPageInfo = new DataAPIPageInfo();
+        contentId = 0;
+        contentTypeId = 0;
+        imageYN = true;
+    }
 }

@@ -4,6 +4,11 @@ import lombok.Data;
 
 @Data
 public class DataAPIPageInfo {
-    private Integer numberOfRows = 10;
-    private Integer pageNo = 1;
+    private Integer numberOfRows;
+    private Integer pageNo;
+
+    public DataAPIPageInfo() {
+        numberOfRows = 10;
+        pageNo = 1;
+    }
 }

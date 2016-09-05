@@ -23,4 +23,15 @@ public class DataAPIAreaBasedListParam {
     private Integer sigunguCode;
 
     private DataAPIClassification dataAPIClassification;
+
+    public DataAPIAreaBasedListParam() {
+        dataAPIAppInfo = new DataAPIAppInfo();
+        dataAPIPageInfo = new DataAPIPageInfo();
+        dataAPIArrange = DataAPIArrange.NAME;
+        dataAPIDelimited = DataAPIDelimited.YES;
+        contentTypeId = 0;
+        areaCode = 0;
+        sigunguCode = 0;
+        dataAPIClassification = new DataAPIClassification();
+    }
 }

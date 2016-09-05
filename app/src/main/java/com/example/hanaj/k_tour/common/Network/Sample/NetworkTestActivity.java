@@ -58,18 +58,11 @@ public class NetworkTestActivity extends AppCompatActivity{
          *          - Return받은 response에 대해서 로직 구현
          *          * onSuccessResponse메소드가 Interface이므로 구현 필수
          *******************************************************************************************************/
-        DataAPIAreaBasedListParam Parm = new DataAPIAreaBasedListParam();
-        TourURL tourURL = new TourURL();
-        DataAPIAppInfo dataAPIAppInfo = new DataAPIAppInfo();
-        DataAPIPageInfo dataAPIPageInfo = new DataAPIPageInfo();
+        DataAPIAreaBasedListParam param = new DataAPIAreaBasedListParam();
+        param.setAreaCode(35);
 
-        Parm.setAreaCode(35);
-        Parm.setDataAPIAppInfo(dataAPIAppInfo);
-        Parm.setDataAPIPageInfo(dataAPIPageInfo);
-        Parm.setDataAPIArrange(DataAPIArrange.NAME);
-        Parm.setDataAPIDelimited(DataAPIDelimited.YES);
-
-        String url = tourURL.execute("GET", APIUrl.DATA_API_PATH, DataAPIOperation.AREABASED_LIST.getValue(), AppInfo.DATA_API_KEY, Parm, "json");
+        String url = TourURL.execute("GET", APIUrl.DATA_API_PATH, DataAPIOperation.AREABASED_LIST.getValue(), AppInfo.DATA_API_KEY, param, "json");
+//        String url = TourURL.areaBasedListURL(param);
 
         ModuleNetwork moduleNetwork = new ModuleNetwork();
 
