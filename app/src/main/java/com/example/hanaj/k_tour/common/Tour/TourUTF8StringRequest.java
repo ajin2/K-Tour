@@ -11,6 +11,8 @@ import java.io.UnsupportedEncodingException;
 /**
  * Created by hanaj on 2016-08-30.
  */
+
+//TODO  이 파일이 왜 있어야 하는지 Slack에 남겨주세요. UTF8StringRequest와 중복코드.
 public class TourUTF8StringRequest extends StringRequest {
 
     public TourUTF8StringRequest(int method, String url, Response.Listener<String> listener, Response.ErrorListener errorListener) {

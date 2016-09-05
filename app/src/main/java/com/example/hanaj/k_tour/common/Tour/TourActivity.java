@@ -36,6 +36,7 @@ public class TourActivity extends AppCompatActivity {
 
     private void requestTourData(){
 
+        //TODO request Version Up 바람. R.string.xxxx 접근하지 말 것. 곧 삭제 예정.
         StringBuilder stringBuilder = new StringBuilder();
 
         String path = getResources().getString(R.string.areaBasedList_URL);

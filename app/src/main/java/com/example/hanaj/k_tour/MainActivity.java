@@ -22,6 +22,7 @@ import com.google.gson.Gson;
 
 public class MainActivity extends Activity {
 
+    //TODO 왜 위에 선언을 했을지 생각해보세요. (회색표시는 사용하지 않은 변수란 뜻)
     private ListView networkTestListView;
     private ListView tourListView;
     private NetworkTestListViewAdapter networkTestListViewAdapter;
@@ -43,6 +44,8 @@ public class MainActivity extends Activity {
         listView.setAdapter(networkTestListViewAdapter);
         requestTestData();
 
+
+        //TODO YoutubeSample에서는 버튼의 생성과 관리를 따로 Method를 뺏는데 왜 그랬을지 생각해보세요.
         networkTestBtn.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {

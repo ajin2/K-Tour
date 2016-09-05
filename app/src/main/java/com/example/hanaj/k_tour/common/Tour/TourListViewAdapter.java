@@ -32,6 +32,7 @@ public class TourListViewAdapter extends BaseAdapter {
         this.context = context;
     }
 
+    //TODO spacebar > Convention Check.
     public  void addTourDataList(AreaBasedJsonResponse areaBasedJsonResponse){
 
         List<TourData> tourDataList = new ArrayList<TourData>();
@@ -42,6 +43,7 @@ public class TourListViewAdapter extends BaseAdapter {
 
         }
 
+        //TODO 주어진 Data를 2차가공해서 쓰는 이유는 ?
         AreaBasedBody body = response.getBody();
         List<AreaBasedItem> items = body.getItems().getItem();
 
