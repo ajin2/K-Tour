@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -12,20 +13,18 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.example.hanaj.k_tour.common.MainSearch.MainSearchActivity;
 import com.example.hanaj.k_tour.common.Network.NetworkManager;
 import com.example.hanaj.k_tour.common.Network.Response.AreaBasedJsonResponse;
 import com.example.hanaj.k_tour.common.Network.Sample.NetworkTestActivity;
-import com.example.hanaj.k_tour.common.Network.Sample.NetworkTestListViewAdapter;
 import com.example.hanaj.k_tour.common.Network.UTF8StringRequest;
 import com.example.hanaj.k_tour.common.Tour.TourListViewAdapter;
 import com.google.gson.Gson;
 
 public class MainActivity extends Activity {
 
-    //TODO 왜 위에 선언을 했을지 생각해보세요. (회색표시는 사용하지 않은 변수란 뜻)
-    private ListView networkTestListView;
     private ListView tourListView;
-    private NetworkTestListViewAdapter networkTestListViewAdapter;
+    private EditText mainSearchEditText;
     private TourListViewAdapter tourListViewAdapter;
 
     @Override
@@ -33,19 +32,22 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button main_search_btn = (Button)findViewById(R.id.main_search_btn);
         Button networkTestBtn = (Button)findViewById(R.id.network_test_btn);
-        ListView listView = (ListView) findViewById(R.id.tour_main_listView);
+        tourListView = (ListView) findViewById(R.id.tour_main_listView);
 
         tourListViewAdapter = new TourListViewAdapter(getApplicationContext());
-        listView.setAdapter(tourListViewAdapter);
-        requestTestData();
+        tourListView.setAdapter(tourListViewAdapter);
+        requestTourData();
 
-        networkTestListViewAdapter = new NetworkTestListViewAdapter(getApplicationContext());
-        listView.setAdapter(networkTestListViewAdapter);
-        requestTestData();
-
-
-        //TODO YoutubeSample에서는 버튼의 생성과 관리를 따로 Method를 뺏는데 왜 그랬을지 생각해보세요.
+        main_search_btn.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, MainSearchActivity.class);
+                startActivity(intent);
+            }
+        });
+//TODO YoutubeSample에서는 버튼의 생성과 관리를 따로 Method를 뺏는데 왜 그랬을지 생각해보세요.
         networkTestBtn.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +57,7 @@ public class MainActivity extends Activity {
         });
     }
 
-    private void requestTestData() {
+    private void requestTourData() {
 
         StringBuilder stringBuilder = new StringBuilder();
 
@@ -65,7 +67,7 @@ public class MainActivity extends Activity {
         String serviceKey = getResources().getString(R.string.Data_API_Key);
         stringBuilder.append("?ServiceKey=" + serviceKey);
 
-        String areaCode = "35";
+        String areaCode = "34";
         stringBuilder.append("&areaCode=" + areaCode);
 
         String mobileOS = getResources().getString(R.string.MobileOS);
@@ -89,8 +91,6 @@ public class MainActivity extends Activity {
                 tourListViewAdapter.addTourDataList(areaBasedJsonResponse);
                 tourListViewAdapter.notifyDataSetChanged();
 
-                networkTestListViewAdapter.addNetworkTestDataList(areaBasedJsonResponse);
-                networkTestListViewAdapter.notifyDataSetChanged();
             }
         }, new Response.ErrorListener() {
 

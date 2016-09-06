@@ -21,8 +21,8 @@
         </activity>
         <activity android:name=".MainActivity" />
 
-        <activity android:name=".common.Network.Sample.NetworkTestActivity">
-        </activity>
+        <activity android:name=".common.Network.Sample.NetworkTestActivity" />
+        <activity android:name=".common.MainSearch.MainSearchActivity"/>
 
 
     </application>
