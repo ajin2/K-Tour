@@ -8,7 +8,7 @@ public class DataAPIPageInfo {
     private Integer pageNo;
 
     public DataAPIPageInfo() {
-        numberOfRows = 10;
+        numberOfRows = 20;
         pageNo = 1;
     }
 }
