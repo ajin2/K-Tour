@@ -21,6 +21,7 @@ import com.google.gson.Gson;
  */
 public class MainSearchActivity extends AppCompatActivity {
 
+    //TODO 회색처리
     private EditText mainSearchEditText;
     private ListView mainSearchListView;
     private MainSearchListViewAdapter mainSearchListViewAdapter;
@@ -42,6 +43,7 @@ public class MainSearchActivity extends AppCompatActivity {
 
         StringBuilder stringBuilder = new StringBuilder();
 
+        //TODO R.string...... 쓰지말라고 ......
         String path = getResources().getString(R.string.searchKeyword_URL);
         stringBuilder.append(path);
 
@@ -70,6 +72,7 @@ public class MainSearchActivity extends AppCompatActivity {
                 Gson gson = new Gson();
                 AreaBasedJsonResponse areaBasedJsonResponse = gson.fromJson(response, AreaBasedJsonResponse.class);
 
+                //TODO 검색결과인데 areaBasedJsonResponse일까?
                 mainSearchListViewAdapter.addMainSearchDataList(areaBasedJsonResponse);
                 mainSearchListViewAdapter.notifyDataSetChanged();
 

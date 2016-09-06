@@ -5,6 +5,8 @@ import com.example.hanaj.k_tour.common.Network.Request.Param.DataAPIAreaBasedLis
 /**
  * Created by hanaj on 2016-09-05.
  */
+
+//TODO 이건또 무슨파일이야 ?
 public class MainSearchURL {
 
     StringBuilder stringBuilder = new StringBuilder();
