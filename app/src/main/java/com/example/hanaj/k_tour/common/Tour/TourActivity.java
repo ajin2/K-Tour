@@ -1,7 +1,10 @@
 package com.example.hanaj.k_tour.common.Tour;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -9,6 +12,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.example.hanaj.k_tour.MainActivity;
 import com.example.hanaj.k_tour.R;
 import com.example.hanaj.k_tour.common.Network.NetworkManager;
 import com.example.hanaj.k_tour.common.Network.Response.AreaBasedJsonResponse;

@@ -22,6 +22,8 @@
         <activity android:name=".MainActivity" />
 
         <activity android:name=".common.Network.Sample.NetworkTestActivity" />
+        <activity android:name=".common.Tour.TourActivity" />
+        <activity android:name=".common.Tour.TourDetailPage" />
         <activity android:name=".common.MainSearch.MainSearchActivity"/>
 
 

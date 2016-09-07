@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -18,14 +20,20 @@ import com.example.hanaj.k_tour.common.Network.NetworkManager;
 import com.example.hanaj.k_tour.common.Network.Response.AreaBasedJsonResponse;
 import com.example.hanaj.k_tour.common.Network.Sample.NetworkTestActivity;
 import com.example.hanaj.k_tour.common.Network.UTF8StringRequest;
+import com.example.hanaj.k_tour.common.Tour.TourDetailPage;
+import com.example.hanaj.k_tour.common.Tour.TourData;
 import com.example.hanaj.k_tour.common.Tour.TourListViewAdapter;
 import com.google.gson.Gson;
+
+import java.util.ArrayList;
 
 public class MainActivity extends Activity {
 
     private ListView tourListView;
     private EditText mainSearchEditText;
     private TourListViewAdapter tourListViewAdapter;
+
+    private ArrayList<TourData> tourDataList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +63,19 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+
+        tourListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //String title = (String) parent.getItemAtPosition(position);
+                Intent intent = new Intent(MainActivity.this, TourDetailPage.class);
+                startActivity(intent);
+            }
+        });
+
     }
+
 
     private void requestTourData() {
 
