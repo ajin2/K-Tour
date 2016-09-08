@@ -4,11 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -20,8 +20,8 @@ import com.example.hanaj.k_tour.common.Network.NetworkManager;
 import com.example.hanaj.k_tour.common.Network.Response.AreaBasedJsonResponse;
 import com.example.hanaj.k_tour.common.Network.Sample.NetworkTestActivity;
 import com.example.hanaj.k_tour.common.Network.UTF8StringRequest;
-import com.example.hanaj.k_tour.common.Tour.TourDetailPage;
 import com.example.hanaj.k_tour.common.Tour.TourData;
+import com.example.hanaj.k_tour.common.Tour.TourDetailPage;
 import com.example.hanaj.k_tour.common.Tour.TourListViewAdapter;
 import com.google.gson.Gson;
 
@@ -47,6 +47,24 @@ public class MainActivity extends Activity {
         tourListViewAdapter = new TourListViewAdapter(getApplicationContext());
         tourListView.setAdapter(tourListViewAdapter);
         requestTourData();
+
+        tourListView.setOnScrollListener(new AbsListView.OnScrollListener() {
+            @Override
+            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+
+            }
+
+            @Override
+            public void onScrollStateChanged(AbsListView view, int scrollState) {
+                if (scrollState == SCROLL_STATE_IDLE) {
+                    // 스크롤 끝에 도달.
+                    if (tourListView.getLastVisiblePosition() >= tourListView.getCount() - 5) {
+                        requestTourData();
+
+                    }
+                }
+            }
+        });
 
         main_search_btn.setOnClickListener(new Button.OnClickListener(){
             @Override
